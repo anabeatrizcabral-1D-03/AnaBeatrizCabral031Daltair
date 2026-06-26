@@ -106,4 +106,170 @@
 
         .cor {
             flex: 1;
-            height: 100
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 15px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .cor:hover {
+            flex: 1.8;
+        }
+
+        .cor:active {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Detalhes do Card */
+        .info-paleta {
+            padding: 20px;
+        }
+
+        .info-paleta h3 {
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        .info-paleta p {
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        /* Notificação Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2d3436;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            animation: fadeIn 0.3s ease, fadeOut 0.3s ease 2s forwards;
+            z-index: 1000;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; display: none; } }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Paletas de Cores Inspiradoras</h1>
+            <p>Descubra combinações harmônicas para transformar o visual do seu próximo projeto digital.</p>
+        </header>
+
+        <section class="video-container">
+            <h2>Aprenda mais sobre Teoria das Cores</h2>
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mKwL4NSgt80?si=Bf7rPq3KHZmoIsYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <main class="grid-paletas">
+            
+            <article class="card-paleta">
+                <div class="some-cores">
+                    <div class="cor" style="background-color: #ffcaa1;" onclick="copiarCor('#FFCAA1')">#FFCAA1</div>
+                    <div class="cor" style="background-color: #fce38a;" onclick="copiarCor('#FCE38A')">#FCE38A</div>
+                    <div class="cor" style="background-color: #eaffd0;" onclick="copiarCor('#EAFFD0')">#EAFFD0</div>
+                    <div class="cor" style="background-color: #95e1d3;" onclick="copiarCor('#95E1D3')">#95E1D3</div>
+                </div>
+                <div class="info-paleta">
+                    <h3>Doce Primavera</h3>
+                    <p>Uma combinação suave de tons pastel ideal para interfaces infantis, bem-estar ou designs minimalistas e amigáveis.</p>
+                </div>
+            </article>
+
+            <article class="card-paleta">
+                <div class="some-cores">
+                    <div class="cor" style="background-color: #0f172a;" onclick="copiarCor('#0F172A')">#0F172A</div>
+                    <div class="cor" style="background-color: #38bdf8;" onclick="copiarCor('#38BDF8')">#38BDF8</div>
+                    <div class="cor" style="background-color: #ec4899;" onclick="copiarCor('#EC4899')">#EC4899</div>
+                    <div class="cor" style="background-color: #7158e2;" onclick="copiarCor('#7158E2')">#7158E2</div>
+                </div>
+                <div class="info-paleta">
+                    <h3>Cyber Neon</h3>
+                    <p>Cores vibrantes e contrastantes sobre uma base escura, perfeitas para projetos de tecnologia, games e designs futuristas.</p>
+                </div>
+            </article>
+
+            <article class="card-paleta">
+                <div class="some-cores">
+                    <div class="cor" style="background-color: #2c3e50;" onclick="copiarCor('#2C3E50')">#2C3E50</div>
+                    <div class="cor" style="background-color: #bdc3c7;" onclick="copiarCor('#BDC3C7')">#BDC3C7</div>
+                    <div class="cor" style="background-color: #ecf0f1;" onclick="copiarCor('#ECF0F1')">#ECF0F1</div>
+                    <div class="cor" style="background-color: #e67e22;" onclick="copiarCor('#E67E22')">#E67E22</div>
+                </div>
+                <div class="info-paleta">
+                    <h3>Corporate Modern</h3>
+                    <p>Tons neutros de cinza e azul-escuro com um toque de laranja para botões e chamadas de ação (CTA) corporativas.</p>
+                </div>
+            </article>
+
+            <article class="card-paleta">
+                <div class="some-cores">
+                    <div class="cor" style="background-color: #6e3b3b;" onclick="copiarCor('#6E3B3B')">#6E3B3B</div>
+                    <div class="cor" style="background-color: #b85c38;" onclick="copiarCor('#B85C38')">#B85C38</div>
+                    <div class="cor" style="background-color: #e0a96d;" onclick="copiarCor('#E0A96D')">#E0A96D</div>
+                    <div class="cor" style="background-color: #5c3d2e;" onclick="copiarCor('#5C3D2E')">#5C3D2E</div>
+                </div>
+                <div class="info-paleta">
+                    <h3>Brisa de Outono</h3>
+                    <p>Uma paleta orgânica e acolhedora baseada na natureza, excelente para marcas de café, artesanato ou moda consciente.</p>
+                </div>
+            </article>
+
+        </main>
+
+        <div id="toast" class="toast">Cor copiada para a área de transferência!</div>
+
+        <footer>
+            <p>Criado com estrutura HTML5, CSS3 & JS. Clique em uma cor para copiar o código HEX!</p>
+        </footer>
+    </div>
+
+    <script>
+        function copiarCor(hex) {
+            // Copia o texto usando a API moderna do navegador
+            navigator.clipboard.writeText(hex).then(() => {
+                const toast = document.getElementById('toast');
+                
+                // Reinicia a animação CSS removendo e adicionando o elemento
+                toast.style.display = 'block';
+                toast.style.animation = 'none';
+                toast.offsetHeight; /* Trigger reflow */
+                toast.style.animation = null; 
+
+                // Esconde a caixinha após 2.3 segundos
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 2300);
+            }).catch(err => {
+                console.error('Erro ao copiar a cor: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
